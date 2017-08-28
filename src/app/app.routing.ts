@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 
 import { AboutComponent }   from './about/about.component';
 import { TeamComponent }   from './team/team.component';
+import { InstructorDetailComponent }   from './instructor-detail/instructor-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
   {
     path: 'team',
     component: TeamComponent
+  },
+  {
+    path: 'instructors/:id',
+    component: InstructorDetailComponent
   }
 ];
 

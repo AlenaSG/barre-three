@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Instructor } from '../instructor.model';
 
 @Component({
   selector: 'app-team',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  instructors: Instructor[] = [
+    new Instructor("Hannah", "Grubaug",
+        "Seattle – Kirkland studio owner Hannah Grubaugh has always loved fitness. She found barre3 through barre3 Bellevue in 2010 and loved the workout and community. After taking many classes, she became an instructor herself and realized that she wanted to bring barre3 to the Kirkland neighborhood. Hannah loves the balance that barre3 has brought to her life and now thoroughly enjoys sharing it with her friends and neighbors.", "Kirkland", true, 1),
+    new Instructor("Sadie", "Lincoln",
+        "Sadie Lincoln is the co-founder and CEO of barre3. <br>Beginning with her flagship barre3 studio in Portland, Oregon, Sadie created a unique style of whole-health fitness classes committed to mind and body results. Her modern approach offers accessible programs and inspiration for balanced living. Barre3’s worldwide franchise locations and Online Workouts have attracted A-list celebrities, every day parents and major publications such as Fast Company, Self, Nylon, and Entrepreneur. <br> Sadie began teaching group exercise 20 years ago while attending UCLA. She was awarded a Graduate Assistantship from the College of William & Mary, where she developed and ran the group fitness program while earning her master’s degree in higher education administration. <br>Since opening her first studio in 2008, barre3’s innovative, results-driven workout and whole-body-health approach are breaking new ground. In addition to more than 100 studios around the globe and 250+ do-anywhere online workouts, barre3 offers hundreds of delicious, whole-foods-based recipes, a thriving digital magazine; and an annual retreat that inspires healthy, balanced living.<br>Today, Sadie is thrilled to lead barre3 while raising her two kids alongside her husband and business partner, Chris.", "Portland, OR", true, 2)
+  ];
+
+  goToDetailPage(clickedInstructor: Instructor) {
+     this.router.navigate(['instructors', clickedInstructor.id]);
+   };
 }
