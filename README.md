@@ -3,7 +3,9 @@ by Alena Golovina, 08.26.2017
 
 
 ## Description
-Create a website that manages the roster of a club, team, or group. This could be anything from an intramural sports league, paint night, book club, pokemon collectors, AA or NA meetup, skateboard crew, hiking group, tribal activity, extracurricular course, basset hound aficionados, activist group, or hack-a-thon team. The choice is yours. Take some time to consider the activities you, your family, or friend group do regularly, and what kind of a site would be beneficial to you or someone you care about.
+This is a website that manages the roster of the Barre3 team.
+Barre3 mixes athleticism, grace, and the latest innovations designed to balance the body.
+Whether you have ten minutes or an hour, each full-body workout optimizes every moment with moves that adapt to your body for maximum results.
 
 ## User Stories:
 
