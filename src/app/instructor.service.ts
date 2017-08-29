@@ -15,6 +15,10 @@ export class InstructorService {
     return this.instructors;
   }
 
+  addInstructor(newInstructor: Instructor) {
+    this.instructors.push(newInstructor);
+  }
+  
   getInstructorById(instructorId: number){
     //for (var i = 0; i <= INSTRUCTORS.length - 1; i++) {
     //  if (INSTRUCTORS[i].id === instructorId) {
