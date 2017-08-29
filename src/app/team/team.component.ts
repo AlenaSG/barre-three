@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Instructor } from '../instructor.model';
 import { InstructorService } from '../instructor.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-team',
@@ -11,7 +12,7 @@ import { InstructorService } from '../instructor.service';
 })
 
 export class TeamComponent implements OnInit {
-  instructors: Instructor[];
+  instructors: FirebaseListObservable<any[]>;
 
   constructor(private router: Router, private instructorService: InstructorService) {}
 

@@ -1,6 +1,6 @@
 <h2>Barre3 Team and Owners</h2>
 
-<div *ngFor="let instructor of instructors" (click)="goToDetailPage(instructor)" class="panel panel-default">
+<div *ngFor="let instructor of instructors | async " (click)="goToDetailPage(instructor)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{instructor.name}}</em> {{instructor.lastname}}</h3>
   </div>

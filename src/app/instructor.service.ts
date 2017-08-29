@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Instructor } from './instructor.model';
 import { INSTRUCTORS } from './mock-instructors';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
 @Injectable()
 export class InstructorService {
-
-  constructor() { }
+ instructors: FirebaseListObservable<any[]>;
+ constructor(private database: AngularFireDatabase) {
+    this.instructors = database.list('instructors');
+ }
 
   getInstructors() {
-    return INSTRUCTORS;
+    return this.instructors;
   }
 
   getInstructorById(instructorId: number){
