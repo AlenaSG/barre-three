@@ -3,5 +3,12 @@
 <div *ngFor="let instructor of instructors | async " (click)="goToDetailPage(instructor)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{instructor.name}}</em> {{instructor.lastname}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <br>{{instructor.description}}<br>
+      {{instructor.location}}<br>
+      {{instructor.owner}}<br>
+      <hr>
+      <app-edit-instructor></app-edit-instructor>
+    </div>
   </div>
 </div>
