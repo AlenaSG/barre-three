@@ -18,8 +18,9 @@ export class InstructorService {
   addInstructor(newInstructor: Instructor) {
     this.instructors.push(newInstructor);
   }
-  
-  getInstructorById(instructorId: number){
+
+  getInstructorById(instructorId: string){
+    return this.database.object('instructors/' + instructorId);
     //for (var i = 0; i <= INSTRUCTORS.length - 1; i++) {
     //  if (INSTRUCTORS[i].id === instructorId) {
     //    return INSTRUCTORS[i];

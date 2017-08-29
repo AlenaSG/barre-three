@@ -1,7 +1,7 @@
 <div>
-  <h3>{{instructorToDisplay.name}}</h3>
-  <h4>{{instructorToDisplay.lastname}}</h4>
-  <p>{{instructorToDisplay.description}}</p>
-  <p>{{instructorToDisplay.location}}</p>
-  <p>Owner? {{instructorToDisplay.owner}}</p>
+  <h3>{{(instructorToDisplay | async).name}}</h3>
+  <h4>{{(instructorToDisplay | async).lastname}}</h4>
+  <p>{{(instructorToDisplay | async).description}}</p>
+  <p>{{(instructorToDisplay | async).location}}</p>
+  <p>Owner? {{(instructorToDisplay | async).owner}}</p>
 </div>

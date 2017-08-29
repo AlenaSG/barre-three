@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Instructor } from '../instructor.model';
 import { InstructorService } from '../instructor.service';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-instructor-detail',
@@ -12,8 +13,8 @@ import { InstructorService } from '../instructor.service';
 })
 
 export class InstructorDetailComponent implements OnInit {
-instructorId: number;
-instructorToDisplay: Instructor;
+instructorId: string;
+instructorToDisplay;
 
 constructor(
     private route: ActivatedRoute,
@@ -23,9 +24,9 @@ constructor(
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-     this.instructorId = parseInt(urlParameters['id']);
+     this.instructorId = urlParameters['id'];
    });
-  // this.instructorToDisplay = this.instructorService.getInstructorById(this.instructorId);
+  this.instructorToDisplay = this.instructorService.getInstructorById(this.instructorId);
   }
 
 }

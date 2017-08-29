@@ -20,7 +20,7 @@ export class TeamComponent implements OnInit {
     this.instructors = this.instructorService.getInstructors();
   }
 
-  goToDetailPage(clickedInstructor: Instructor) {
-    // this.router.navigate(['instructors', clickedInstructor.id]);
+  goToDetailPage(clickedInstructor) {
+    this.router.navigate(['instructors', clickedInstructor.$key]);
    };
 }
