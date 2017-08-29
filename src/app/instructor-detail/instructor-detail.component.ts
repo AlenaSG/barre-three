@@ -25,7 +25,7 @@ constructor(
     this.route.params.forEach((urlParameters) => {
      this.instructorId = parseInt(urlParameters['id']);
    });
-   this.instructorToDisplay = this.instructorService.getInstructorById(this.instructorId);
+  // this.instructorToDisplay = this.instructorService.getInstructorById(this.instructorId);
   }
 
 }

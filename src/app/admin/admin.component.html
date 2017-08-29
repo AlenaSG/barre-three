@@ -1,3 +1,37 @@
-<p>
-  admin works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Instructor to Barre3 Team</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Instructor's Name:</label>
+        <br>
+        <input #newName>
+      </div>
+      <div>
+        <label>Instructor's Last Name:</label>
+        <br>
+        <input #newLastname>
+      </div>
+      <div>
+        <label>Instructor's Story:</label>
+        <br>
+        <input #newDescription>
+      </div>
+      <div>
+        <label>Location:</label>
+        <br>
+        <input #newLocation>
+      </div>
+      <div>
+    <label>Is this Instructor Owner?</label>
+    <select #newOwner>
+      <option [value]="true"> Owner </option>
+      <option [value]="false"> Not an Owner </option>
+    </select>
+    </div>
+      <button (click)="submitForm(newName.value, newLastname.value, newDescription.value, newLocation.value, newOwner.value); newName.value=''; newLastname.value=''; newDescription.value=''; newLocation.value=''">Add</button>
+    </div>
+  </div>
+</div>

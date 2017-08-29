@@ -3,6 +3,5 @@ export class Instructor {
               public lastname: string,
               public description: string,
               public location: string,
-              public owner: boolean,
-              public id: number) { }
+              public owner: boolean) { }
   }

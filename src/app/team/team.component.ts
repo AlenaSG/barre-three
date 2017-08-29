@@ -21,6 +21,6 @@ export class TeamComponent implements OnInit {
   }
 
   goToDetailPage(clickedInstructor: Instructor) {
-     this.router.navigate(['instructors', clickedInstructor.id]);
+    // this.router.navigate(['instructors', clickedInstructor.id]);
    };
 }

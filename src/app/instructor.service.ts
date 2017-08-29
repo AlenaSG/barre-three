@@ -16,11 +16,11 @@ export class InstructorService {
   }
 
   getInstructorById(instructorId: number){
-    for (var i = 0; i <= INSTRUCTORS.length - 1; i++) {
-      if (INSTRUCTORS[i].id === instructorId) {
-        return INSTRUCTORS[i];
-      }
-    }
+    //for (var i = 0; i <= INSTRUCTORS.length - 1; i++) {
+    //  if (INSTRUCTORS[i].id === instructorId) {
+    //    return INSTRUCTORS[i];
+    //  }
+  //  }
   }
 
 }
