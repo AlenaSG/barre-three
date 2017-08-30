@@ -20,4 +20,10 @@ export class EditInstructorComponent implements OnInit {
   beginUpdatingInstructor(instructorToUpdate){
       this.instructorService.updateInstructor(instructorToUpdate);
     }
+
+    beginDeletingInstructor(instructorToDelete){
+      if(confirm("Are you sure you want to delete this instructor from the list?")){
+        this.instructorService.deleteInstructor(instructorToDelete);
+      }
+    }
 }

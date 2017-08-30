@@ -33,4 +33,9 @@ export class InstructorService {
                               });
   }
 
+  deleteInstructor(localInstructorToDelete){
+    var instructorEntryInFirebase = this.getInstructorById(localInstructorToDelete.$key);
+    instructorEntryInFirebase.remove();
+  }
+
 }

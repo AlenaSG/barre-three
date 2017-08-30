@@ -44,9 +44,13 @@ Create a new file called api-keys.ts in the src/app directory. Then, place your 
     storageBucket: "xxxx.appspot.com",
     messagingSenderId: "xxxx"
   };`
+
+  #Firebase credentials
+  /src/app/api-keys.ts
+
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build or `ng build --env=prod --output-hashing none`
 
 ## Running unit tests
 
