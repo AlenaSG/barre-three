@@ -1,3 +1,27 @@
-<p>
-  edit-instructor works!
-</p>
+<h4>Edit Instructor</h4>
+
+<label>New Instructor's Name:</label>
+<input [(ngModel)]="selectedInstructor.name">
+<br>
+
+<label>New Instructor's Last Name:</label>
+<input [(ngModel)]="selectedInstructor.lastname">
+<br>
+
+<label>About New Instructor:</label>
+<input [(ngModel)]="selectedInstructor.description">
+<br>
+
+<label>New Instructor's Location:</label>
+<input [(ngModel)]="selectedInstructor.location">
+<br>
+
+<div>
+<label>Is this Instructor an Owner?</label>
+<select [(ngModel)]="selectedInstructor.owner">
+<option [value]="true"> Owner </option>
+<option [value]="false"> Not an Owner </option>
+</select>
+</div>
+<br>
+<button (click)="beginUpdatingInstructor(selectedInstructor)">Update</button>

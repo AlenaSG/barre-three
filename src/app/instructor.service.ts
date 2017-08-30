@@ -21,11 +21,16 @@ export class InstructorService {
 
   getInstructorById(instructorId: string){
     return this.database.object('instructors/' + instructorId);
-    //for (var i = 0; i <= INSTRUCTORS.length - 1; i++) {
-    //  if (INSTRUCTORS[i].id === instructorId) {
-    //    return INSTRUCTORS[i];
-    //  }
-  //  }
+  }
+
+  updateInstructor(localUpdatedInstructor){
+    var instructorEntryInFirebase = this.getInstructorById(localUpdatedInstructor.$key);
+    instructorEntryInFirebase.update({name: localUpdatedInstructor.name,
+                                lastname: localUpdatedInstructor.lastname,
+                                description: localUpdatedInstructor.description,
+                                location: localUpdatedInstructor.location,
+                                owner: localUpdatedInstructor.owner,
+                              });
   }
 
 }
