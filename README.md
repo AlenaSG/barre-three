@@ -42,8 +42,8 @@ Create a new file called api-keys.ts in the src/app directory. Then, place your 
     authDomain: "xxxx.firebaseapp.com",
     databaseURL: "https://xxxx.firebaseio.com",
     storageBucket: "xxxx.appspot.com",
-    messagingSenderId: "xxxx"`
-  };
+    messagingSenderId: "xxxx"
+  };`
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
